@@ -1,0 +1,24 @@
+{% extends "AppCategorias/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Page Content-->
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'AppCategorias/assets/animatrix3.webp' %}" alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light"> REFLEXIONES EN DETALLE</h1>
+                <body>
+                        <br>
+                        <p> <b><u>Título:</u></b> {{reflexionesnoticias.titulo}}</p>
+                        <p> <b><u> Usuarix:</u></b> {{reflexionesnoticias.usuario}}</p>
+                        <p> <b><u> Contenido:</u></b> {{reflexionesnoticias.contenido}}</p>
+                        <p> <b><u> Relacionado con noticia:</u></b><a href="{{reflexionesnoticias.relacionado_con_noticia.url}}"> {{reflexionesnoticias.relacionado_con_noticia}}</a></p>
+                        <p> <b><u> Relacionado con Paper o Libro:</u></b><a href="{{reflexionesnoticias.relacionado_con_publicacionCientifica.url}}"> {{reflexionesnoticias.relacionado_con_publicacionCientifica}}</a></p>
+                    <br>
+                </body>
+                <a class="btn btn-primary" href="{% url 'ReflexNot Lista' %}"> REGRESAR A LA LISTA</a>
+</html>
+</div>
+</div>
+{% endblock %}

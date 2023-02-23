@@ -1,0 +1,27 @@
+{% extends "AppCategorias/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Page Content-->
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'AppCategorias/assets/atencion.png' %}" alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">SECCIÓN DE REFLEXIONES</h1>
+            <h4> ESPACIO PARA ELIMINAR.</h4>
+<body>
+    <form action="" method="POST">  {% csrf_token %}
+        
+        <h5>¿SEGURO QUERÉS ELIMINAR ESTA NOTICIA?</h5>
+        <br>
+        <br>
+        <input type="submit" value = "ENVIAR">
+        <br>
+        <br>
+
+    </form>
+</body>
+</html>
+</div>
+</div>
+{% endblock %}

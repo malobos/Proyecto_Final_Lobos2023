@@ -1,0 +1,36 @@
+{% extends "AppUsuarios/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <br>
+
+            <header class="masthead text-center text-black">
+                        <div class="masthead-content">
+                            <div class="container px-5">
+                                <h1 class="masthead-heading mb-3">¡BIENVENIDXS A MI BLOG DE BIG DATA, IA Y EL FUTURO DEL TRABAJO!</h1>
+                                    <h4> <font face=”Arial”>Un Blog de sociología, distopías, utopías y otras yerbas</font> </h4>
+                                <br><br>
+                                <div align="center"><img class="img-fluid rounded  mb-4 mb-lg-0" src="{% static 'AppUsuarios/assets/inicio2.jpg' %}" alt="..." /></div>
+                                <br>
+                                <h3 class="masthead-subheading mb-0">INICIA SESIÓN ANTES DE CONTINUAR</h3>
+                                <br>
+                            <body>
+                                    <form action="" method="POST"> {% csrf_token %}
+                                        {{formulario.as_p}}
+                                        <br>
+                    
+                                        <button type="submit" class="btn btn-primary"> INICIAR SESIÓN</button>
+                                    </form> 
+                                <br>
+                    <h6 class="font-weight-light">¿AÚN NO TENÉS CUENTA EN EL BLOG?</h6>
+                    <a class="btn btn-primary" href="{% url 'Registro' %}">REGISTRATE</a>
+                    <br>
+                    <br>
+                    
+                </div>
+            </div>
+            
+
+{% endblock %}

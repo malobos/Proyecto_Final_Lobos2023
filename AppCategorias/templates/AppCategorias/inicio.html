@@ -1,0 +1,20 @@
+{% extends "AppCategorias/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'AppCategorias/assets/animatrix1.jpg' %}" alt="..." /></div>
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light">BIENVENIDX <u>{{mensaje}}</u></h1>
+                    <p>La idea de este blog es interiorizarnos en el mundo de la Big Data y la IA, para reflexionar críticamente sobre estos procesos y particularmente sobre sus implicancias en el mundo del trabajo. <br>
+                        Partiendo de investigaciones, libros y noticias relacionados con estos fenomenos, te invito a que compartas tus reflexiones.<br> En cada apartado, encontrarás un buscador que te permitirá acceder a las publicaciones por tags.<br> Así mismo, sentite libre de agregar información que creas de relevancia. </p>
+                    </div>
+            </div>
+            <!-- Call to Action-->
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><p class="text-white m-0">“El futuro es nuestro mundo, el futuro es nuestro tiempo.” <em> Agente Smith</em></p></div>
+            </div>
+            
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "AppCategorias/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Page Content-->
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'AppCategorias/assets/animatrix4.webp' %}" alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light"> NOTICIAS EN DETALLE</h1>
+            
+
+            <body>
+                    
+                        <br>
+                        <p> <b><u>Título:</u></b> {{noticias.titulo}}</p>
+                        <p> <b><u> Medio:</u></b> {{noticias.medio}}</p>
+                        <p> <b><u>URL:</u></b><br><a href="{{noticias.url}}"> {{noticias.url}}</a> <br></p>
+                        <p> <b><u>Fecha de Publicación:</u></b> {{noticias.fechadepublicacion}}</p>
+                        <p> <b><u> Tag1:</u></b> {{noticias.tag1}}</p>
+                    
+
+                        <a class="btn btn-primary" href="{% url 'Noticias Lista' %}"> REGRESAR A LA LISTA</a>
+                        
+                    <br>
+                </body>
+    
+</html>
+</div>
+</div>
+{% endblock %}

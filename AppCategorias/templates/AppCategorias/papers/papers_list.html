@@ -1,0 +1,43 @@
+{% extends "AppCategorias/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Page Content-->
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'AppCategorias/assets/robotsvshumanos.jpg' %}" alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">SECCIÓN DE PAPERS Y LIBROS</h1>
+            <p>Aquí encontrarás una lista de papers y libros que tratan sobre la Big Data, la IA y sus repercusiones en el mundo del trabajo.</p>
+            <a class="btn btn-primary" href="{% url 'Busqueda Papers' %}">BUSCAR EN LA LISTA DE PAPERS Y LIBROS</a>
+            <br>
+            <br>
+            <p>Si querés, podés subir algun recurso o una reflexión que creas relevante sobre el tema.</p>
+            <a class="btn btn-primary" href="{% url 'Papers Crear' %}"> SUBIR UNA PUBLICACIÓN </a>
+            <a class="btn btn-primary" href="{% url 'ReflexNot Crear' %}"> SUBIR UNA REFLEXIÓN </a>
+        </div>
+    </div>
+    <!-- Call to Action-->
+    
+    <body>
+        <br>
+            <br>
+        {% for paper in object_list %}
+        
+        <h4><u> Título:</u> <em>{{paper.titulo}}</em></h4>
+        <h6><em>Fecha de Subida: {{paper.fechaDeSubida}}</em></h6>
+            <p>
+            <a class="btn btn-primary" href="{% url 'Papers Detalles' paper.id %}"> VER </a>
+            <a class="btn btn-primary" href="{% url 'Papers Editar' paper.id %}"> EDITAR </a>
+            <a class="btn btn-primary" href="{% url 'Papers Eliminar' paper.id %}"> ELIMINAR </a>
+            
+            </p>
+        
+
+    {% endfor %}
+    </body>
+                                   
+    </html>
+</div>
+</div>
+{% endblock %}
